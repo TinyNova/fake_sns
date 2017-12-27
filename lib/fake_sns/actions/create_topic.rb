@@ -29,7 +29,7 @@ module FakeSNS
       end
 
       def generate_arn
-        "arn:aws:sns:us-east-1:#{SecureRandom.hex}:#{name}"
+        "arn:aws:sns:us-east-1:#{Digest::MD5.hexdigest(name)}:#{name}"
       end
 
       def existing_topic
