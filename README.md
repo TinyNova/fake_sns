@@ -1,4 +1,6 @@
-# Fake SNS
+# Fake SNS - Tinynova Fork
+
+(See first noteworthy difference)
 
 A small web app for local SNS development.
 
@@ -7,6 +9,7 @@ contents, so you can create scenarios.
 
 ### Noteworthy differences:
 
+* Creation of topics now has a deterministic ARN using MD5 rather than SecureRandom.hex
 * No checking of access keys.
 * Returns all topics, not just 100, no support for `NextToken` parameter.
 
